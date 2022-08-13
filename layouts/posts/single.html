@@ -17,6 +17,10 @@
     <hr />
     <article role="article">
         {{ .Content }}
+        {{ if .Site.DisqusShortname }}
+        <div class="disqus-comments">
+        {{ template "_internal/disqus.html" . }}
+        </div>
     </article>
 </div>
 {{ end }}
